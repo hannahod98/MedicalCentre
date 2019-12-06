@@ -1,4 +1,9 @@
 <?php
+# @Date:   2019-11-06T14:41:02+00:00
+# @Last modified time: 2019-11-26T14:18:13+00:00
+
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -41,6 +46,9 @@ $app->singleton(
     App\Exceptions\Handler::class
 );
 
+// $app->routeMiddleware([
+//     'csrf' => 'Laravel\Lumen\Http\Middleware\VerifyCsrfToken'
+// ]);
 /*
 |--------------------------------------------------------------------------
 | Return The Application

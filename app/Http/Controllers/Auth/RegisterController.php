@@ -1,4 +1,9 @@
 <?php
+# @Date:   2019-11-06T14:41:01+00:00
+# @Last modified time: 2019-11-07T18:46:59+00:00
+
+
+
 
 namespace App\Http\Controllers\Auth;
 
@@ -63,10 +68,12 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+        $user->roles()->attach(Role::where('name','user')->first());
+        return $user;
     }
 }
