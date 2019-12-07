@@ -1,4 +1,9 @@
 <?php
+# @Date:   2019-12-05T18:55:54+00:00
+# @Last modified time: 2019-12-07T13:55:38+00:00
+
+
+
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -18,8 +23,8 @@ class CreateVisitsTable extends Migration
             $table->date('date');
             $table->time('time');
             $table->String('duration');
-            $table->bigInteger('patient_id')->unsigned;
-            $table->bigInteger('doctor_id')->unsigned;
+            $table->bigInteger('patient_id')->unsigned();
+            $table->bigInteger('doctor_id')->unsigned();
             $table->decimal('cost', 6, 2);
 
             $table->timestamps();

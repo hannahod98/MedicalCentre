@@ -1,6 +1,6 @@
 @extends('layouts.app')
 # @Date:   2019-12-05T14:33:27+00:00
-# @Last modified time: 2019-12-05T16:55:32+00:00
+# @Last modified time: 2019-12-07T17:02:19+00:00
 
 @section('content')
 <div class="container">
@@ -8,7 +8,7 @@
     <div class="col-md-8 col-md-offset-2">
       <div class="card">
         <div class="card-header">
-          Add new patient
+          Edit patient
         </div>
         <div class="card-body">
           @if($errors->any())

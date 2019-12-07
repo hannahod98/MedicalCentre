@@ -1,6 +1,6 @@
 <?php
 # @Date:   2019-11-06T14:41:00+00:00
-# @Last modified time: 2019-12-02T14:29:16+00:00
+# @Last modified time: 2019-12-07T14:05:39+00:00
 
 
 
@@ -46,8 +46,22 @@ Route::get('/admin/patients/{id}/edit', 'Admin\PatientController@edit')->name('a
 Route::put('/admin/patients/{id}', 'Admin\PatientController@update')->name('admin.patients.update');
 Route::delete('/admin/patients/{id}', 'Admin\PatientController@destroy')->name('admin.patients.destroy');
 
+Route::get('/admin/visits', 'Admin\VisitController@index')->name('admin.visits.index');
+Route::get('/admin/visits/create', 'Admin\VisitController@create')->name('admin.visits.create');
+Route::get('/admin/visits/{id}', 'Admin\VisitController@show')->name('admin.visits.show');
+Route::post('/admin/visits/store', 'Admin\VisitController@store')->name('admin.visits.store');
+Route::get('/admin/visits/{id}/edit', 'Admin\VisitController@edit')->name('admin.visits.edit');
+Route::put('/admin/visits/{id}', 'Admin\VisitController@update')->name('admin.visits.update');
+Route::delete('/admin/visits/{id}', 'Admin\VisitController@destroy')->name('admin.visits.destroy');
+
 Route::get('/patient/doctors', 'Patient\DoctorController@index')->name('patient.doctors.index');
 Route::get('/patient/doctors/{id}', 'Patient\DoctorController@show')->name('patient.doctors.show');
 
+Route::get('/patient/doctors/{id}/visits/create', 'Patient\VisitController@create')->name('patient.visits.create');
+Route::post('/patient/doctors/{id}/visits/store', 'Patient\VisitController@store')->name('patient.visits.store');
+
 Route::get('/patient/visits', 'Patient\VisitController@index')->name('patient.visits.index');
 Route::get('/patient/visits/{id}', 'Patient\VisitController@show')->name('patient.visits.show');
+
+Route::get('/user/visits', 'Patient\VisitController@index')->name('patient.visits.index');
+Route::get('/user/visits/{id}', 'user\VisitController@show')->name('patient.visits.show');

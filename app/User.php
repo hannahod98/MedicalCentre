@@ -1,6 +1,6 @@
 <?php
 # @Date:   2019-11-06T14:41:01+00:00
-# @Last modified time: 2019-11-12T20:20:22+00:00
+# @Last modified time: 2019-12-07T14:27:05+00:00
 
 
 
@@ -48,6 +48,11 @@ public function doctor(){
 public function patient(){
   return $this->hasOne('App\Patient');
 }
+
+public function visit(){
+  return $this->belongsToMany('App\Doctor')->using('App\Visit');
+}
+
 
     public function roles(){
       return $this->belongsToMany('App\Role','user_role');
