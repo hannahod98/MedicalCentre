@@ -1,6 +1,6 @@
 @extends('layouts.app')
 # @Date:   2019-11-06T14:41:00+00:00
-# @Last modified time: 2019-11-26T13:32:32+00:00
+# @Last modified time: 2019-12-08T15:45:54+00:00
 
 
 
@@ -15,7 +15,7 @@
                 <div class="card-body">
 
                   Welcome to the Medical centre
-                  <a href="{{ route('admin.doctors.index')}}">Doctors</a>
+                  
 
 
                 </div>

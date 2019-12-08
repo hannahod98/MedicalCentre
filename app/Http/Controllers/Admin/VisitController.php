@@ -1,6 +1,6 @@
 <?php
 # @Date:   2019-12-05T19:51:26+00:00
-# @Last modified time: 2019-12-07T17:23:55+00:00
+# @Last modified time: 2019-12-08T14:39:03+00:00
 
 
 
@@ -154,6 +154,9 @@ class VisitController extends Controller
      */
     public function destroy($id)
     {
-        //
+      $visit = Visit::findOrFail($id);
+
+      $visit->delete();
+      return redirect()->route('admin.visits.index');
     }
 }

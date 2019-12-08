@@ -1,6 +1,6 @@
 <?php
 # @Date:   2019-11-06T14:41:00+00:00
-# @Last modified time: 2019-12-07T14:05:39+00:00
+# @Last modified time: 2019-12-08T19:38:35+00:00
 
 
 
@@ -62,6 +62,3 @@ Route::post('/patient/doctors/{id}/visits/store', 'Patient\VisitController@store
 
 Route::get('/patient/visits', 'Patient\VisitController@index')->name('patient.visits.index');
 Route::get('/patient/visits/{id}', 'Patient\VisitController@show')->name('patient.visits.show');
-
-Route::get('/user/visits', 'Patient\VisitController@index')->name('patient.visits.index');
-Route::get('/user/visits/{id}', 'user\VisitController@show')->name('patient.visits.show');

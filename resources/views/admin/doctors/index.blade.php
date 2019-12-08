@@ -1,5 +1,5 @@
 # @Date:   2019-11-26T12:27:33+00:00
-# @Last modified time: 2019-12-01T15:58:56+00:00
+# @Last modified time: 2019-12-08T15:37:10+00:00
 @extends('layouts.app')
 
 @section('content')
@@ -10,7 +10,7 @@
 <div class="card">
 <div class="card-header">
   Doctors
-  <a href="{{ route('admin.doctors.create')}}" class="btn btn-primary">Add</a>
+  <a href="{{ route('admin.doctors.create')}}" class="btn btn-primary float-right">Add</a>
 </div>
 <div class="card-body">
   @if (count($doctors) === 0)

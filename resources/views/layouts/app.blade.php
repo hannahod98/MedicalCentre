@@ -1,4 +1,9 @@
 <!doctype html>
+# @Date:   2019-11-06T14:49:20+00:00
+# @Last modified time: 2019-12-08T15:45:27+00:00
+
+
+
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
@@ -26,6 +31,10 @@
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
+                  <a href="{{ route('admin.home')}}" class="nav-link">Home</a>
+                  <a href="{{ route('admin.doctors.index')}}" class="nav-link">Doctors</a>
+                  <a href="{{ route('admin.patients.index')}}" class="nav-link">Patients</a>
+                  <a href="{{ route('admin.visits.index')}}" class="nav-link">Visits</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
