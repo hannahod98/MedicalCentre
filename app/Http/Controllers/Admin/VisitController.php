@@ -1,6 +1,6 @@
 <?php
 # @Date:   2019-12-05T19:51:26+00:00
-# @Last modified time: 2019-12-08T14:39:03+00:00
+# @Last modified time: 2019-12-10T14:13:20+00:00
 
 
 
@@ -15,6 +15,11 @@ use App\Patient;
 
 class VisitController extends Controller
 {
+  public function __construct()
+  {
+      $this->middleware('auth');
+      $this->middleware('role:admin');
+  }
     /**
      * Display a listing of the resource.
      *

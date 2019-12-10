@@ -1,6 +1,6 @@
 <?php
 # @Date:   2019-11-16T11:09:55+00:00
-# @Last modified time: 2019-12-07T17:15:34+00:00
+# @Last modified time: 2019-12-10T13:22:17+00:00
 
 
 
@@ -123,12 +123,12 @@ return redirect()->route('admin.doctors.index');
         'start_date'=>'required|date'
       ]);
 
-      $doctor->user->name = $request->input('name');
-      $doctor->user->address = $request->input('address');
-      $doctor->user->phone = $request->input('phone');
-      $doctor->user->email = $request->input('email');
-      $doctor->user->password = bcrypt('secret');
-      $doctor->user->save();
+      $user->user->name = $request->input('name');
+      $user->user->address = $request->input('address');
+      $user->user->phone = $request->input('phone');
+      $user->user->email = $request->input('email');
+      $user->user->password = bcrypt('secret');
+      $user->user->save();
 
       $doctor->start_date = $request->input('start_date');
       $doctor->user_id = $doctor->user->id;

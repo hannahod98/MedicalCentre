@@ -1,6 +1,6 @@
 @extends('layouts.app')
 # @Date:   2019-12-05T14:33:27+00:00
-# @Last modified time: 2019-12-05T16:23:18+00:00
+# @Last modified time: 2019-12-10T13:50:21+00:00
 
 
 @section('content')
@@ -39,14 +39,13 @@
                 <label for="title">Email</label>
                 <input type="text" class="form-control" id="email" name="email" value="{{ old('email') }}" />
               </div>
-              <div class="form-group">
-                <label for="title">Insurance</label>
-                  <br>
-                  <label for="title">Yes</label>
-                <input type="radio" id="insurance" name="insurance" value="{{ old('insurance') }}" checked>
-                  <br>
-                  <label for="title">No</label>
-                <input type="radio"  id="insurance" name="insurance">
+          
+              <div class="form-group{{ $errors->has('insurance') ? ' has-error' : '' }}">
+                <label>Insurance</label>
+                <select class="form-control" name="insurance" id="insurance">
+                  <option value="1" @if (old('insurance') == 1) selected @endif>Yes</option>
+                  <option value="0" @if (old('insurance') == 0) selected @endif>No</option>
+                </select>
               </div>
               <div class="form-group">
                 <label for="title">Insurance name</label>
